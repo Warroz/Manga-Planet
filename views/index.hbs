@@ -1,0 +1,39 @@
+
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <header>
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">Mangas Planet</h1>
+        <h2 class="subtitle"> L'actualité des Mangas en temps réel</h2>
+      </div>
+    </div>
+  </header>
+<div class="fond-ecran">
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      {{#if article}}
+      {{#each article}}
+      <div class="col-md-4 article">
+        {{categorie}}
+        <h2>{{title}}</h2>
+        {{{content}}}
+        <p>publié par <a href="/users/profile/{{authorId}}">{{author}}</a>, le {{formatDate}}</p>
+        <p>{{price}} €</p>
+        <p><a class="btn btn-secondary" href="/articles/single/{{_id}}" role="button">En savoir plus -> &raquo;</a>
+        </p>
+      </div>
+      {{/each}}
+      {{else}}
+      <div class="col-md-12 article">
+        <p>Aucun article n'a été publié pour l'instant ... Soyez le premier !</p>
+      </div>
+      {{/if}}
+    </div>
+    <hr>
+
+  </div> <!-- /container -->
+
+</div>
+

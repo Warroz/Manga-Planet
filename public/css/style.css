@@ -1,0 +1,240 @@
+/* font écran */
+.fond-ecran {
+  background-image: url(/images/logos/library.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 104vh;
+  /* margin-bottom: 500px; */
+}
+
+
+
+/***** BOOTSTRAP SETTINGS *****/
+body {
+    padding-top: 3.5rem;
+}
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+/*MODAL BOX
+################################# */
+
+
+ .modal{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  animation: fadeIn .3s both;
+}
+
+/* Connexion modal */
+.modal-wrapper{
+  width: 400px;
+  max-width: calc(100vw - 20px);
+  max-height: calc(100vh - 20px);
+  padding: 20px;
+  animation: slideFromTop .5s both;
+  background-image:url(/images/logos/co.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  border-radius:15px;
+  color: #eee;
+}
+
+/* inscription modal */
+.modal-zooper{
+  width: 400px;
+  max-width: calc(100vw - 20px);
+  max-height: calc(100vh - 20px);
+  padding: 20px;
+  animation: slideFromTop .5s both;
+  background-image:url(/images/logos/inscription.jpeg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  border-radius:15px;
+  color:#eee;
+}
+
+.modal[aria-hidden="true"]{
+  animation-name: fadeOut;
+}
+.modal[aria-hidden="true"] .modal-wrapper,
+.modal[aria-hidden="true"] .modal-wrapper2 {
+  animation-name: slideToBottom;
+}
+.modal-wrapper2{
+  width: 900px;
+  max-width: calc(100vw - 20px);
+  max-height: calc(100vh - 20px);
+  padding: 20px;
+  animation: slideFromTop .5s both;
+}
+
+@keyframes fadeIn{
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideFromTop{
+  from { transform: translateY(-50px); }
+  to { transform: translateY(0px); }
+}
+@keyframes fadeOut{
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@keyframes slideToBottom{
+  from { transform: translateY(0px); }
+  to { transform: translateY(50px); }
+} 
+
+/***** GLOBAL *****/
+
+.article{
+  background-color: rgba(216, 200, 191, 0.8);
+  border: 1px solid rgb(216, 126, 126);
+  margin: 15em auto;
+}
+.article img{
+  max-width: 100%;
+  max-height: 450px;
+  object-fit: contain;
+}
+.comment{
+  background-color: rgba(216, 200, 191, 0.8);
+  border: 1px solid rgb(216, 126, 126);
+  margin: 15px 0;
+  padding: 15px;
+}
+
+/***** PROFILE *****/
+.profile {
+  background-color: rgba(216, 200, 191, 0.8);
+  border: 1px solid rgb(216, 126, 126);
+  margin: 15px auto;
+  margin-bottom: 50px;
+}
+.profile h3 {
+  text-align: center;
+}
+.userDataBlock {
+  display: flex;
+  justify-content: space-around;
+}
+.registerDate {
+  text-align: center;
+}
+.profileHead {
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgb(216, 126, 126);
+  margin: 15px;
+  background-color: rgba(168, 153, 145, 0.8);
+  margin-bottom: 60px;
+}
+.profileHead img {
+  max-width: 100px;
+}
+.profileHead h3 {
+  /* margin: auto; */
+  margin-top: 30px;
+}
+
+/* for navbar */
+.fixed-top {
+  position: fixed;
+  top: 0px;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  bottom: 870px;
+}
+
+.nav-link-logo{
+  height: 120px;
+}
+
+/* for title */
+.display-3{
+  text-align: center;
+  font-family: 'Milonga', cursive;
+}
+.subtitle {
+  font-family: 'Milonga', cursive;
+  text-align: center;
+}
+
+
+
+/* footer */
+footer {
+  background-color: #171717;
+  color: #fff;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+footer .fab {
+  font-size: 30px;
+  padding: 10px;
+  color: #007bff;
+}
+
+/* FOR HEAD */
+.jumbotron{
+margin-bottom: 1rem;
+background-color: #54677b;
+border-radius: .3rem;
+}
+
+
+/* FOR ALERT */
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  margin-top: 32px;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    margin-top: 32px;
+}
+
+/* for css button */
+.js-modal-close {
+  margin-left: 5px;
+  border-radius: 2px;
+}
+
+/* for ajout article */
+
+main {
+  margin-top: 35px;
+  margin-bottom: 80px;
+}
+
+.pp{
+  margin-top: 0;
+margin-bottom: 3rem;
+}

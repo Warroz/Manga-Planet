@@ -1,0 +1,66 @@
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Manga Connect</h1>
+      <p>Vendez ou échangez vos mangas à travers toute la France d'un simple clic.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-12 article">
+          <h2>{{article.title}}</h2>
+          {{{article.content}}}
+          <p>publié par <a href="/users/profile/{{article.authorId}}">{{article.author}}</a>, le {{article.formatDate}}</p>
+          {{#if isOwner}}
+          <p><a class="btn btn-secondary" href="/articles/edit/{{article._id}}" role="button">Modifier &raquo;</a> <a class="btn btn-secondary" href="/articles/delete/{{article._id}}" role="button">Supprimer &raquo;</a></p>
+          {{/if}}
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <section>
+          {{#if comment}}
+            {{#each comment}}
+            <article class="comment" id="{{_id}}">
+              <p>Publié par <a href="/users/profile/{{authorId}}">{{author}}</a>, le {{formatDate}}</p>
+              {{{content}}}
+              {{#if isCommentOwner}}
+              <div class="adminButtonsCont">
+                <a class="btn btn-secondary" href="/comments/edit/{{_id}}">Modifier</a>
+                <a class="btn btn-secondary" href="/comments/delete/{{_id}}/{{../article._id}}">Supprimer</a>
+              </div>
+              {{/if}}
+            </article>
+            {{/each}}
+          {{else}}
+          <p class="comment">Aucun commentaire pour le moment ... Soyez le premier !</p>
+          {{/if}}
+        </section>
+        {{#if user}}
+        <form method="POST" action="/comments/create/{{article._id}}">
+          <div class="form-group">
+            <label for="content">Votre commentaire :</label>
+            <textarea class="form-control" id="content" name="content" rows="3"></textarea>
+            <script>
+              CKEDITOR.replace(
+                ('content'));
+              CKEDITOR.config.entities = false;
+              CKEDITOR.config.entities_latin = false;
+            </script>
+          </div>
+          <button type="submit" class="btn btn-secondary">Publier</button>
+        </form>
+        {{else}}
+        <p><strong>Connectez vous pour commenter !</strong></p>
+        {{/if}}
+      </div>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+</main>

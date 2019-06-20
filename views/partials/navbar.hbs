@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+ <a href="/"> <img class="nav-link-logo" src="/images/logos/logo.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+      
+      </li>
+      {{#if user}}
+      <li class="nav-item">
+        <a class="nav-link" href="/users/profile/{{user}}">Mon profil</a>
+      </li>
+      {{/if}}
+    </ul>
+    <ul class="navbar-nav my-2 my-lg-0">
+      {{#if user}}
+      <li class="nav-item">
+        <a class="nav-link" href="/articles/add">Ajouter article</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/users/logout">Déconnexion</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link js-modal" href="/views/frontendView/page_japon/Japon.hbs">En savoir plus</a>
+      </li>
+      {{else}}
+      <li class="nav-item">
+        <a class="nav-link js-modal" href="#signupModal">Inscription</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-modal" href="#loginModal">Connexion</a>
+      </li>
+      {{/if}}
+    </ul>
+  </div>
+</nav>

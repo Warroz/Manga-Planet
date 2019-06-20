@@ -1,0 +1,40 @@
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Manga Connect</h1>
+      <h2>Modifier une annonce</h2>
+      <p>Vendez ou échangez vos mangas à travers toute la France d'un simple clic.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-12 ">
+        <form method="POST" action="/articles/update/{{article._id}}">
+            <div class="form-group">
+                <label for="title">Titre de l'annonce :</label>
+                <input type="text" class="form-control" id="title" name="title" value="{{article.title}}">
+            </div>
+            <div class="form-group">
+                <label for="content">Votre annonce :</label>
+                <textarea class="form-control" id="content" name="content" rows="3">{{{article.content}}}</textarea>
+                <script>
+                    CKEDITOR.replace(
+                        ('content'));
+                    CKEDITOR.config.entities = false;
+                    CKEDITOR.config.entities_latin = false;
+                </script>
+            </div>
+            <button type="submit" class="btn btn-secondary">Modifier</button>
+        </form>
+      </div>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+</main>

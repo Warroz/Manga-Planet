@@ -1,0 +1,36 @@
+<aside id="loginModal" class="modal" aria-hidden="true" role="dialog" aria-modal="false" style="display: none;">
+
+    <div class="modal-wrapper bloc js-modal-stop">
+        <form id="login-form" method="POST" action="/users/login">
+            <p><label for="userName">Entrez votre nom :</label><br />
+            <input type="text" name="userName" id="userName" /></p>
+            <p><label for="pass">Entrez votre mot de passe :</label>
+            <input type="password" name="pass" id="pass" /></p>
+            <p><input type="submit" value="Envoyer" /><button class="js-modal-close">Annuler</button></p>
+        </form>
+        </div>
+</aside>
+
+
+
+
+<aside id="signupModal" class="modal" aria-hidden="true" role="dialog" aria-modal="false" style="display: none;">
+    <div class="modal-zooper bloc js-modal-stop">
+        <form id="register-form" method="POST" action="/users/add" >
+            <p><label for="userName">Entrez votre nom :</label><br />
+                <input type="text" name="userName" id="userName"/></p>
+            <p><label for="age"> Entrez votre age :</label><br />
+                <input type="number" name="age" id="age"/></p>
+            <p><label for="locate"> Entrez votre nationalité :</label><br />
+                <input type="text" name="locate" id="locate"/></p>
+            <p><label for="mail">Entrez votre adresse mail :</label><br />
+                <input type="email" name="mail" id="mail"/></p>
+            <p><label for="pass">Entrez votre mot de passe :</label>
+                <input type="password" name="pass" id="pass" /></p>
+            <p><label for="pass2">Confirmez votre mot de passe :</label>
+                <input type="password" name="pass2" id="pass2" /></p>
+            <p><input type="submit" value="Envoyer" /><button class="js-modal-close">Annuler</button></p>
+        </form>
+    </div>
+</aside>
+ 
